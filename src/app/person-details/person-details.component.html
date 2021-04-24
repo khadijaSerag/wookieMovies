@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row my-5 d-flex justify-content-center ">
+        <div class="col-lg-4 col-md-6  ">
+            <img class="w-100" [src]="imgPrefix+persondetails?.profile_path" alt="">
+        </div>
+        <div class="col-lg-8 col-md-12">
+            <h2 class="pt-2 pb-4  font-weight-bolder text-md-center text-lg-left ">{{persondetails?.name}}</h2>
+            <h6 class="  "><span class="text-danger font-weight-bolder">Birthday : </span> {{persondetails?.birthday}} </h6>
+            <h6 class="  "><span class="text-danger font-weight-bolder">Place of Birth : </span> {{persondetails?.place_of_birth}}</h6>
+            <h6 class=""><span class="text-danger font-weight-bolder">Known for Department :</span> {{persondetails?.known_for_department}}</h6>
+            <h6 class=" pt-3 text-danger font-weight-bolder">Biography : </h6>
+            <p class=" font-weight-bolder">{{persondetails?.biography}}</p>
+           
+        </div>
+    </div>
+</div>

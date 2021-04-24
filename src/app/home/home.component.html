@@ -1,0 +1,121 @@
+<!-- -------------------------------- navbar ------------------------------- -->
+<nav>
+    <div class="px-5 py-3 ">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 col-sm-12">
+                        <h1>
+                            <span>WOOKIE</span><br>
+                            <span>MOVIES</span>
+                        </h1>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mt-3  ">
+                        <div
+                            class="mt-md-5 ml-sm-2 row d-flex justify-content-between align-items-center position-relative">
+                            <div
+                                class="col-sm-1 search  position-absolute d-flex justify-content-center align-items-center">
+                                <span class=""><i class="fas fa-search"></i></span>
+                            </div>
+
+                            <div class="col-sm-11 ">
+                                <span class="search ml-auto ">
+                                    <input class="form-control bg-transparent " [(ngModel)]='term' type="text">
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<div class="line"></div>
+
+
+
+<!--  ---------------------- home ------------------------  -->
+<section class="px-4 py-5">
+
+    <!-- ............................... movies............................ -->
+    <div class="row pb-5">
+
+        <div class="col-md-12">
+            <h4>Trending movies</h4>
+        </div>
+
+        <div class="col-md-12">
+            <owl-carousel-o [options]="customOptions" (dragging)="startDragging($event.dragging)">
+
+
+                <ng-container *ngFor="let movie of trendingMovies|search:term">
+                    <ng-template carouselSlide [id]="movie.id">
+                        <div class="col-md-12" >
+                            <div class="movie"[routerLink]="['/moviedetails', movie.id]">
+                                <img  class="image w-100 my-3" [src]="imgPrefix+movie.poster_path" [alt]="movie.alt"
+                                    [title]="movie.title">
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+
+            </owl-carousel-o>
+        </div>
+
+    </div>
+
+
+    <!-- ................................. tv ............................. -->
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Trending TV</h4>
+        </div>
+
+        <div class="col-md-12">
+            <owl-carousel-o [options]="customOptions" (dragging)="startDragging($event.dragging)">
+                <ng-container *ngFor="let tv of trendingTvs|search:term">
+                    <ng-template carouselSlide [id]="tv.id">
+                        <div class="col-md-12">
+                            <div class="tv" [routerLink]="['/tvdetails', tv.id]">
+                                <img class="image w-100 my-3" [src]="imgPrefix+tv.poster_path" [alt]="tv.alt"
+                                    [title]="tv.title">
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+
+    </div>
+
+
+    <!-- ................................. person ............................. -->
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Trending Person</h4>
+        </div>
+
+        <div class="col-md-12">
+
+            <owl-carousel-o [options]="customOptions" (dragging)="startDragging($event.dragging)">
+                <ng-container *ngFor="let person of trendingPersons|search:term">
+                    <ng-template carouselSlide [id]="person.id">
+                        <div class="col-md-12">
+                            <div class="person" [routerLink]="['/persondetails', person.id]">
+                                <img class="image w-100 my-3" [src]="imgPrefix+person.profile_path" [alt]="person.alt"
+                                    [title]="person.title">
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,56 @@
+// // ............................ navbar....................
+// nav {
+//     background-color: #1f2e78;
+
+//     .all {
+//         height: 30px;
+//         width: 30px;
+//         // background-color: #bbb;
+//         border-radius: 50%;
+//         display: inline-block;
+//         margin-left: 10px;
+//     }
+
+//     .dot1 {
+//         background-color: #e02020;
+//         @extend .all;
+//     }
+//     .dot2 {
+//         background-color: #f7b500;
+//         @extend .all;
+//     }
+//     .dot3 {
+//         background-color: #6dd400;
+//         @extend .all;
+//     }
+// }
+
+// ............................ navbar....................
+// .search {
+//     transform: rotate(90deg);
+//     left: -8%;
+//     i {
+//         font: {
+//             size: 35px;
+//             weight: 900;
+//         }
+//     }
+// }
+// .form-control {
+//     color: black !important;
+//     border: 2px solid black;
+//     height: calc(1.5em + 0.75rem + -6px);
+// }
+
+// .line {
+//     width: 100%;
+//     background-color: #52555a;
+//     height: 3px;
+// }
+// @media screen and (max-width:"576px") and  (min-width:"0px"){
+ 
+//     .search {
+//         margin-top: 0px;
+//         left: -52%;
+//     }
+// }

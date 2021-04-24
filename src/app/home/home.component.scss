@@ -1,0 +1,55 @@
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+// ............................ navbar....................
+.search {
+    transform: rotate(90deg);
+    left: -8%;
+    i {
+        font: {
+            size: 40px;
+            weight: 900;
+        }
+    }
+}
+.form-control {
+    color: black !important;
+    border: 3px solid black;
+    height: calc(1.5em + 0.75rem + -6px);
+}
+
+.line {
+    width: 100%;
+    background-color: #52555a;
+    height: 3px;
+}
+@media screen and (max-width: "576px") and (min-width: "0px") {
+    .search {
+        margin-top: 0px;
+        left: -52%;
+    }
+}
+h1,
+h4 {
+    font-weight: 700;
+}
+input[type="text"] {
+    font-weight: bolder;
+}
+
+// ...............................home..................................
+.image {
+    cursor: pointer;
+}
+
+.tv,
+.movie,
+.person {
+    transition: 1s all;
+}
+
+.tv:hover,
+.movie:hover,
+.person:hover {
+    transform: scale(0.95, 0.95);
+}
